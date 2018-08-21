@@ -16,14 +16,14 @@ $(buttonID).click(function (e) {
     let wordz = $("input[type='text']").val()
     //console.log(wordz)
     //window.alert("You clicked me!");
-    $("<li id='clickMe'>" + wordz + "</li>").appendTo(ul);
-    $("#clickMe").click(function () {
+    $("<li class='clickMe'>" + wordz + "</li>").appendTo(ul);
+    $(".clickMe").click(function () {
         var colorR = Math.floor((Math.random() * 256));
         var colorG = Math.floor((Math.random() * 256));
         var colorB = Math.floor((Math.random() * 256));
         $(this).css("color", "rgb(" + colorR + "," + colorG + "," + colorB + ")")
     });
-    $("#clickMe").dblclick(function () {
+    $(".clickMe").dblclick(function () {
         $(this).remove();
     });
     //    $("<h2 id='hover'>" + wordz + "</h2>").appendTo(div)
